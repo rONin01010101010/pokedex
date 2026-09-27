@@ -1,3 +1,6 @@
 export function cleanInput(input: string): string[]{
-    return input.split(",");
+    let arr:string[] = input.split(", ");
+    return arr;
 }
+
+cleanInput("hello world")
