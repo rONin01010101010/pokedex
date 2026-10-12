@@ -1,6 +1,8 @@
 export function cleanInput(input: string): string[]{
-    let arr:string[] = input.split(", ");
-    return arr;
+   
+    return input
+    .toLowerCase()
+    .trim()
+    .split(" ")
+    .filter((word) => word !== "");
 }
-
-cleanInput("hello world")
