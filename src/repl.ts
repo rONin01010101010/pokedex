@@ -2,12 +2,7 @@ import { createInterface } from 'node:readline';
 import { on, EventEmitter } from 'node:events';
 import process from 'node:process';
 
-
-export type CLICommand  = {
-    name: string,
-    description: string,
-    callback: (commands: Record<string, CLICommand>) => void
-}
+import {CLICommand} from './state.js'
 
 export function cleanInput(input: string): string[]{
     return input
